@@ -35,7 +35,7 @@ BUILD_DIR = build
 # source
 ######################################
 
-SRC_DIR = SRC \
+SRC_DIR = Src \
 SPL/CMSIS/CM3/CoreSupport \
 SPL/CMSIS/CM3/DeviceSupport/ST/STM32F10x \
 SPL/STM32F10x_StdPeriph_Driver/src
@@ -87,7 +87,7 @@ CPU = -mcpu=cortex-m3
 
 
 # mcu
-MCU = $(CPU) -mthumb $(FPU) $(FLOAT-ABI)
+MCU = $(CPU) -mthumb
 
 # macros for gcc
 # AS defines
@@ -96,7 +96,7 @@ AS_DEFS =
 # C defines
 C_DEFS =  \
 -DSTM32F10X_MD \
--DSTM32F103xB
+-DUSE_STDPERIPH_DRIVER 
 
 
 # AS includes
